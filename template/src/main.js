@@ -10,6 +10,21 @@ import router from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
+/** required lodash */
+window._ = require('lodash');
+window.$ = window.jQuery = require('jquery');
+
+{{#sass}}
+{{#bootstrapSass}}
+/* load default app style */
+require('./sass/app.scss');
+
+/* required bootstrap javascript */
+require('bootstrap-sass');
+{{/bootstrapSass}}
+{{/sass}}
+
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -26,6 +26,8 @@
   "dependencies": {
     "vue": "^2.5.2"{{#router}},
     "vue-router": "^3.0.1"{{/router}}
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -38,6 +40,11 @@
     "babel-preset-env": "^1.3.2",
     "babel-preset-stage-2": "^6.22.0",
     "babel-register": "^6.22.0",
+    {{#sass}}
+    {{#bootstrapSass}}
+    "bootstrap-sass": "^3.3.7",
+    {{/bootstrapSass}}
+    {{/sass}}
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
@@ -101,6 +108,9 @@
     {{/e2e}}
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
+    {{#sass}}
+    "sass-loader": "^6.0.6",
+    {{/sass}}
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
